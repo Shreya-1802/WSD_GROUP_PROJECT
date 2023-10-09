@@ -81,95 +81,181 @@ const RegistrationForm = () => {
     // Submit the form if there are no errors
     if (Object.keys(newErrors).length === 0) {
       axios.post("http://localhost:5000/signin", { name: formData.name, gender: formData.gender, email: formData.email, username: formData.username, password: formData.password, phoneNumber: formData.phoneNumber })
-			.then((res) => {
-				if (res.data === "Added") {
-					alert("Account created successfully!");
-          history.push({
-            pathname: "/",
-            state: {
-              needsRefresh: true,
-            },
-          });
-				}
-				else if (res.data === "error") {
-					alert("Error Occured, try again later");
-				}
-			})
+        .then((res) => {
+          if (res.data === "Added") {
+            alert("Account created successfully!");
+            history.push({
+              pathname: "/",
+              state: {
+                needsRefresh: true,
+              },
+            });
+          }
+          else if (res.data === "error") {
+            alert("Error Occured, try again later");
+          }
+        })
     }
   };
 
   return (
-    <div className="registration-page">
-      <h1>Registration</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        {errors.name && <p className="error">{errors.name}</p>}
-        <select
-          name="gender"
-          value={formData.gender}
-          onChange={handleChange}
-        >
-          <option value="">Select gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-        {errors.gender && <p className="error">{errors.gender}</p>}
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-        {errors.email && <p className="error">{errors.email}</p>}
-        
-<input type="text"
-  name="username"
-  placeholder="Username"
-  value={formData.username}
-  onChange={handleChange}
-/>
-{errors.username && <p className="error">{errors.username}</p>}
+    <section className="myform-area">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="form-area signin-form">
+              <div className="form-content">
+                <h2>MEME App</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
+                <img src="" />
+              </div>
+              <div className="form-input">
+                <h2>Signin Form</h2>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  {errors.name && <p className="error">{errors.name}</p>}
+                  <select
+                    name="gender"
+                    value={formData.gender}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                  {errors.gender && <p className="error">{errors.gender}</p>}
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  {errors.email && <p className="error">{errors.email}</p>}
 
-<input
-  type="password"
-  name="password"
-  placeholder="Password"
-  value={formData.password}
-  onChange={handleChange}
-/>
-{errors.password && <p className="error">{errors.password}</p>}
+                  <input type="text"
+                    name="username"
+                    placeholder="Username"
+                    value={formData.username}
+                    onChange={handleChange}
+                  />
+                  {errors.username && <p className="error">{errors.username}</p>}
 
-<input
-  type="password"
-  name="confirmPassword"
-  placeholder="Confirm Password"
-  value={formData.confirmPassword}
-  onChange={handleChange}
-/>
-{errors.confirmPassword && (
-  <p className="error">{errors.confirmPassword}</p>
-)}
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={formData.password}
+                    onChange={handleChange}
+                  />
+                  {errors.password && <p className="error">{errors.password}</p>}
 
-<input
-  type="text"
-  name="phoneNumber"
-  placeholder="Phone Number"
-  value={formData.phoneNumber}
-  onChange={handleChange}
-/>
-{errors.phoneNumber && <p className="error">{errors.phoneNumber}</p>}
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                  />
+                  {errors.confirmPassword && (
+                    <p className="error">{errors.confirmPassword}</p>
+                  )}
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+                  <input
+                    type="text"
+                    name="phoneNumber"
+                    placeholder="Phone Number"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                  />
+                  {errors.phoneNumber && <p className="error">{errors.phoneNumber}</p>}
+
+                  <button className="myform-btn" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    //     <div className="registration-page">
+    //       <h1>Registration</h1>
+    //       <form onSubmit={handleSubmit}>
+    //         <input
+    //           type="text"
+    //           name="name"
+    //           placeholder="Name"
+    //           value={formData.name}
+    //           onChange={handleChange}
+    //         />
+    //         {errors.name && <p className="error">{errors.name}</p>}
+    //         <select
+    //           name="gender"
+    //           value={formData.gender}
+    //           onChange={handleChange}
+    //         >
+    //           <option value="">Select gender</option>
+    //           <option value="male">Male</option>
+    //           <option value="female">Female</option>
+    //           <option value="other">Other</option>
+    //         </select>
+    //         {errors.gender && <p className="error">{errors.gender}</p>}
+    //         <input
+    //           type="email"
+    //           name="email"
+    //           placeholder="Email"
+    //           value={formData.email}
+    //           onChange={handleChange}
+    //         />
+    //         {errors.email && <p className="error">{errors.email}</p>}
+
+    // <input type="text"
+    //   name="username"
+    //   placeholder="Username"
+    //   value={formData.username}
+    //   onChange={handleChange}
+    // />
+    // {errors.username && <p className="error">{errors.username}</p>}
+
+    // <input
+    //   type="password"
+    //   name="password"
+    //   placeholder="Password"
+    //   value={formData.password}
+    //   onChange={handleChange}
+    // />
+    // {errors.password && <p className="error">{errors.password}</p>}
+
+    // <input
+    //   type="password"
+    //   name="confirmPassword"
+    //   placeholder="Confirm Password"
+    //   value={formData.confirmPassword}
+    //   onChange={handleChange}
+    // />
+    // {errors.confirmPassword && (
+    //   <p className="error">{errors.confirmPassword}</p>
+    // )}
+
+    // <input
+    //   type="text"
+    //   name="phoneNumber"
+    //   placeholder="Phone Number"
+    //   value={formData.phoneNumber}
+    //   onChange={handleChange}
+    // />
+    // {errors.phoneNumber && <p className="error">{errors.phoneNumber}</p>}
+
+    //         <button type="submit">Submit</button>
+    //       </form>
+    //     </div>
   );
 };
 

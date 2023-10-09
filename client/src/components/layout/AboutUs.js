@@ -33,6 +33,7 @@ const AboutUsPage = () => {
   ];
 
   return (
+    <div className="mainContainer1" >
     <div className="about-us-page">
       <h1>About Us</h1>
       <p>
@@ -61,6 +62,7 @@ const AboutUsPage = () => {
           ))}
         </ul>
       </section>
+    </div>
     </div>
   );
 };

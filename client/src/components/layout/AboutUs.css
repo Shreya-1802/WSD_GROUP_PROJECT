@@ -1,18 +1,32 @@
+.mainContainer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .about-us-page {
-    width: 700px;
-    margin: 0 auto;
+  width: 70vw;
+  padding: 3rem;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(186, 84, 104);
   }
   
   h1 {
     text-align: center;
+    color: #000;
   }
   
   p {
     margin-bottom: 20px;
+    color: #000;
   }
   
   .team-members {
     margin-top: 20px;
+    color: #000;
   }
   
   .team-members h2 {

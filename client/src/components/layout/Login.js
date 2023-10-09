@@ -37,52 +37,92 @@ const LoginForm = () => {
 
     setErrors(newErrors);
 
-    
+
     if (Object.keys(newErrors).length === 0) {
-      axios.post("http://localhost:5000/login", { username: username, password: password})
-			.then((res) => {
-				if (res.data === "Valid") {
-					history.push({
-            pathname: "/meme",
-            state: {
-              needsRefresh: true,
-            },
-          });
-				}
-				else if (res.data === "Invalid") {
-          alert("Invalid Username or Passeword");
-				}
-				else if (res.data === "error") {
-          alert("Error Occured, try again later.");
-				}
-			})
+      axios.post("http://localhost:5000/login", { username: username, password: password })
+        .then((res) => {
+          if (res.data === "Valid") {
+            history.push({
+              pathname: "/meme",
+              state: {
+                needsRefresh: true,
+              },
+            });
+          }
+          else if (res.data === "Invalid") {
+            alert("Invalid Username or Passeword");
+          }
+          else if (res.data === "error") {
+            alert("Error Occured, try again later.");
+          }
+        })
     }
   };
 
+
+
   return (
-    <div className="login-page">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={username}
-          onChange={handleChange}
-        />
-        {errors.username && <p className="error">{errors.username}</p>}
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={handleChange}
-        />
-        {errors.password && <p className="error">{errors.password}</p>}
-        <button type="submit">Login</button>
-        <button type="button" onClick={() => history.push("/Register")}>Register</button>
-      </form>
-    </div>
+    <section className="myform-area">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="form-area login-form">
+              <div className="form-content">
+                <h2>MEME App</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
+                <img src="" />
+              </div>
+              <div className="form-input">
+                <h2>Login Form</h2>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    value={username}
+                    onChange={handleChange}
+                  />
+                  {errors.username && <p className="error">{errors.username}</p>}
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={handleChange}
+                  />
+                  {errors.password && <p className="error">{errors.password}</p>}
+                  <button className="myform-btn" type="submit">Login</button>
+                  <button className="myform-btn" type="button" onClick={() => history.push("/Register")}>Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    // <div className="login-page">
+    //   <h1>Login</h1>
+    //   <form onSubmit={handleSubmit}>
+    //     <input
+    //       type="text"
+    //       name="username"
+    //       placeholder="Username"
+    //       value={username}
+    //       onChange={handleChange}
+    //     />
+    //     {errors.username && <p className="error">{errors.username}</p>}
+    //     <input
+    //       type="password"
+    //       name="password"
+    //       placeholder="Password"
+    //       value={password}
+    //       onChange={handleChange}
+    //     />
+    //     {errors.password && <p className="error">{errors.password}</p>}
+    //     <button type="submit">Login</button>
+    //     <button type="button" onClick={() => history.push("/Register")}>Register</button>
+    //   </form>
+    // </div>
   );
 };
 

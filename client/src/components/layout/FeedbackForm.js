@@ -61,6 +61,7 @@ const FeedbackForm = () => {
   };
 
   return (
+    <div className="mainContainer2">
     <div className="feedback-form">
       <h1>Feedback Form</h1>
       <form onSubmit={handleSubmit}>
@@ -89,6 +90,7 @@ const FeedbackForm = () => {
         {errors.feedback && <p className="error">{errors.feedback}</p>}
         <button type="submit">Submit</button>
       </form>
+    </div>
     </div>
   );
 };

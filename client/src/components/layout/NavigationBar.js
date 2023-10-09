@@ -6,12 +6,7 @@ const NavigationBar = () => {
   return (
     <nav>
       <ul>
-        <li>
-          <Link to="/">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
+        
         <li>
           <Link to="/meme">Meme</Link>
         </li>

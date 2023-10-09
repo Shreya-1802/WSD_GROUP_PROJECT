@@ -1,6 +1,16 @@
+.mainContainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 .feedback-form {
-    width: 500px;
+    width: 600px;
     margin: 0 auto;
+    border: 1px solid black  ;
+    padding: 3rem;
+    border-radius: 15px;
+    background-color: rgb(121, 179, 224);
   }
   
   h1 {
