@@ -1,0 +1,49 @@
+.about-us-page {
+    width: 700px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  .team-members {
+    margin-top: 20px;
+  }
+  
+  .team-members h2 {
+    text-align: center;
+  }
+  
+  .team-members ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .team-members li {
+    margin-bottom: 20px;
+  }
+  
+  .team-members h3 {
+    margin-bottom: 10px;
+  }
+  
+  .team-members ul.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team-members ul.social-links li {
+    margin-right: 10px;
+  }
+  
+  .team-members ul.social-links a {
+    color: #000;
+  }
+  

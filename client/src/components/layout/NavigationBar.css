@@ -1,0 +1,30 @@
+/* NavigationBar.css */
+
+nav {
+    background-color: #333; /* Background color for the navigation bar */
+    color: white; /* Text color */
+    padding: 10px 0; /* Vertical padding */
+  }
+  
+  ul {
+    list-style: none; /* Remove bullet points for list items */
+    display: flex; /* Display list items horizontally */
+    justify-content: center; /* Center-align the list items */
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 20px; /* Add spacing between navigation items */
+  }
+  
+  a {
+    text-decoration: none; /* Remove underlines from links */
+    color: white; /* Text color for links */
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  

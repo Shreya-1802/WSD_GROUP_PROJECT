@@ -1,0 +1,32 @@
+.feedback-form {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .error {
+    color: red;
+  }
+  
