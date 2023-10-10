@@ -25,6 +25,7 @@ import {
     useHistory,
     Redirect,
 } from "react-router-dom";
+import Gallery from '../Gallery/Gallery';
 
 const App = () => {
     return (
@@ -33,7 +34,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/meme">
                         <AppWrapper>
-                        <NavigationBar />
+                            <NavigationBar />
                             <Container>
                                 <Title primary fsize="2" margin="0 0 2rem">
                                     <Icon src={logo} alt="The MEME Generator" />
@@ -71,6 +72,12 @@ const App = () => {
                         <NavigationBar />
                         <AboutUs />
                     </Route>
+                    <Route exact path="/gallery">
+                        <NavigationBar />
+                        <Gallery />
+                    </Route>
+
+
 
                 </Switch>
             </div>

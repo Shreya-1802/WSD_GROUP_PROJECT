@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import { useHistory } from "react-router-dom";
 import axios from "axios"
+import meme from './meme.jpg';
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -69,8 +70,8 @@ const LoginForm = () => {
             <div className="form-area login-form">
               <div className="form-content">
                 <h2>MEME App</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
-                <img src="" />
+                <p>when nothing goes right..... go left</p>
+                <img src={meme} alt="meme image" height={300} width={200} />
               </div>
               <div className="form-input">
                 <h2>Login Form</h2>
